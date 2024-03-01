@@ -14,8 +14,8 @@ foreach ($req as $rs) {
             <div class="bold big"><?= $rs['numero'] ?></div>
             <div class="localisation">
                 <span class="bulle">N <?= $rs['niveau'] ?></span>
-                <span class="bulle"><?= ucfirst($rs['status']) ?></span> par 
-                <span class="bulle"><?= ucfirst($locataire['nomlocataire']) ?></span>
+                <span class="bulle"><?= ucfirst($rs['status']) ?></span> <?php if($rs['status'] == 'occupe'){ if(!empty($locataire)){ ?> par 
+                <span class="bulle"><?= ucfirst($locataire['nomlocataire']) ?></span><?php } } ?>
             </div>
         </div>
         <div class="btnitem">
